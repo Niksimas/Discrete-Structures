@@ -19,9 +19,13 @@ public:
     Set(){}
 
     void add(int new_elem){
-        if (this->contains(new_elem) == -1){
-            mass[n] = new_elem;
-            n++;
+        if (n == 100){
+            cout << "Set is overload!";
+        }else {
+            if (this->contains(new_elem) == -1) {
+                mass[n] = new_elem;
+                n++;
+            }
         }
     }
 
