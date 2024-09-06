@@ -2,6 +2,8 @@
 // Created by nikita on 05.09.2024.
 //
 
+// using encoding IBM866
+
 #include <iostream>
 using namespace std;
 
