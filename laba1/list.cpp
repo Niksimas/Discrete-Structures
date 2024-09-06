@@ -1,14 +1,9 @@
 //
 // Created by nikita on 05.09.2024.
 //
-//Список дает доступ не только к первому/последнему элементу (как стек и очередь), но и позволяет обращаться к любой позиции по индексу.
-//
-//Англ. - List.
-//Операции:
-//insert(i, x) ? вставить элемент в указанное место
-//remove(i) ? удалить элемент с заданным индексом
-//indexOf(x) ? индекс первого вхождения элемента (-laba1, если не найден);
-//isEmpty() ? проверка на пустоту (true ? пустой; false ? хотя бы laba1 элемент)
+
+// using encoding IBM866
+
 
 #include <iostream>
 using namespace std;
@@ -22,7 +17,7 @@ public:
     List(){}
 
     void insert(int elem, int pos){
-        if (pos >= 100 || pos < 0){ cout << "Индекс выходит за пределы списка!\n";}
+        if (pos >= 100 || pos < 0){ cout << "List index out of range!\n";}
         else{
             for (int i = n - 1; i > pos; i++){
                 mass[i] = mass[i-1];
@@ -48,7 +43,7 @@ public:
 
     void print() {
         //Проверка на пустоту
-        if (n==0) {cout << "Лист пуст!\n";}
+        if (n==0) {cout << "List is empty!\n";}
         for (int i=0; i<n; i++) {
             cout << mass[i] << " ";
         }
