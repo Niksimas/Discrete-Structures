@@ -20,7 +20,7 @@ public:
 
     void add(int new_elem){
         if (n == 100){
-            cout << "Set is overload!";
+            cout << "Set is overload!\n";
         }else {
             if (this->contains(new_elem) == -1) {
                 mass[n] = new_elem;
