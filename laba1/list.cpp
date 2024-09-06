@@ -42,7 +42,6 @@ public:
     bool isEmpty(){return (n==0);}
 
     void print() {
-        //Проверка на пустоту
         if (n==0) {cout << "List is empty!\n";}
         for (int i=0; i<n; i++) {
             cout << mass[i] << " ";
