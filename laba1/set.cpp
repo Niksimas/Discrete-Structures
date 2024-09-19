@@ -7,19 +7,20 @@
 #include <iostream>
 using namespace std;
 
+const int max_size = 100;
 
 class Set{
 
 private:
     int n = 0;
-    int mass[100];
+    int mass[max_size];
 
 public:
 
     Set(){}
 
     void add(int new_elem){
-        if (n == 100){
+        if (n == max_size){
             cout << "Set is overload!\n";
         }else {
             if (this->contains(new_elem) == -1) {

@@ -8,16 +8,19 @@
 #include <iostream>
 using namespace std;
 
+const int max_size = 100;
+
 class List{
 private:
+
     int n = 0;
-    int mass[100];
+    int mass[max_size];
 public:
 
     List(){}
 
     int indexOf(int item){
-        if (n==0){
+        if (isEmpty()){
             return -1;
         }else{
             for (int i =0; i<n; i++){
@@ -25,13 +28,14 @@ public:
                     return i;
                 }
             }
+            return -1;
         }
     }
 
     bool isEmpty(){return (n==0);}
 
     void print() {
-        if (n==0) {cout << "List is empty!\n";}
+        if (isEmpty()) {cout << "List is empty!\n";}
         for (int i=0; i<n; i++) {
             cout << mass[i] << " ";
         }
@@ -39,8 +43,8 @@ public:
     }
 
     void insert(int elem, int pos){
-        if (pos >= 100 || pos < 0){ cout << "List index out of range!\n";}
-        else if (n==100){ cout << "List is overload!\n";}
+        if (pos >= max_size || pos < 0){ cout << "List index out of range!\n";}
+        else if (n==max_size){ cout << "List is overload!\n";}
         else{
             if (pos >= n){ insert(elem); }
             else{
@@ -54,15 +58,11 @@ public:
     }
 
     void insert(int elem){
-        if (n==100){ cout << "List is overload!\n";}
-        else{
-            mass[n] = elem;
-            n++;
-        }
+        insert(elem, n);
     }
 
     void remove(int pos){
-        if (pos >= 100 || pos < 0){ cout << "List index out of range!\n";}
+        if (pos >= max_size || pos < 0){ cout << "List index out of range!\n";}
         else if (isEmpty()){ cout << "List is empty!\n";}
         else{
             for (int i = pos; i < n; i++ ){

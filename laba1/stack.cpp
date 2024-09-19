@@ -7,12 +7,13 @@
 #include <iostream>
 using namespace std;
 
+const int max_size = 100;
 
 class Stack{
 private:
 
     int n = 0;
-    int mass[100];
+    int mass[max_size];
 
 public:
     Stack(){}
@@ -28,7 +29,7 @@ public:
     }
 
     void push(int new_elem){
-        if (n == 100){
+        if (n == max_size){
             cout << "Stack is overflow!\n";
         }else{
             mass[n] = new_elem;

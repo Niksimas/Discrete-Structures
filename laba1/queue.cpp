@@ -8,6 +8,7 @@
 
 using namespace std;
 
+const int max_size = 100;
 
 class Queue {
 private:
@@ -15,7 +16,7 @@ private:
     // int *mass;
     // = int[100]
     int n = 0;
-    int mass[100];
+    int mass[max_size];
 
 public:
 
@@ -23,7 +24,7 @@ public:
 
 
     void enqueue(int add_elem){
-        if (n != 100){
+        if (n != max_size){
             mass[n] = add_elem;
             n++;
         } else{
